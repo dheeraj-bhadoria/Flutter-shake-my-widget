@@ -2,6 +2,9 @@
 
 flutter_shakemywidget - Enables you to shake any widget with property of shake count with duration. You can use any widget to shake
 
+![image description](https://github.com/dheeraj-bhadoria/Flutter-shake-my-widget/blob/main/shakeme.gif)
+
+
 ## Platform Support
 
 | Android | iOS | MacOS | Web | Linux | Windows |
@@ -36,7 +39,7 @@ This will add a line like this to your package's pubspec.yaml (and run an implic
 ```yaml
 
     dependencies:
-    flutter_shakemywidget: ^1.0.2+1
+    flutter_shakemywidget: ^1.0.4+1
 
 ```
 

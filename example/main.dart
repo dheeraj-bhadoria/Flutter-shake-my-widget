@@ -63,10 +63,14 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 InkWell(
-                  child: Text("Shake Me", style: TextStyle(color: Colors.black),),
-                  onTap: (){
+                  child: Text(
+                    "Shake Me",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  onTap: () {
                     // Shake the widget by following code
                     shakeKey.currentState?.shake();
                   },

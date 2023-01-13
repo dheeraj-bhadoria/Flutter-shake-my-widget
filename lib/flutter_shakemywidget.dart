@@ -52,14 +52,16 @@ class ShakeWidgetState extends AnimationControllerState<ShakeMe> {
     return AnimatedBuilder(
       /// 2. pass our custom animation as an argument
       animation: animationController,
+
       /// 3. optimization: pass the given child as an argument
       child: widget.child,
       builder: (context, child) {
         final sineValue =
-        sin(widget.shakeCount * 2 * pi * animationController.value);
+            sin(widget.shakeCount * 2 * pi * animationController.value);
         return Transform.translate(
           /// 4. apply a translation as a function of the animation value
           offset: Offset(sineValue * widget.shakeOffset, 0),
+
           /// 5. use the child widget
           child: child,
         );
@@ -68,13 +70,12 @@ class ShakeWidgetState extends AnimationControllerState<ShakeMe> {
   }
 }
 
-
 abstract class AnimationControllerState<T extends StatefulWidget>
     extends State<T> with SingleTickerProviderStateMixin {
   AnimationControllerState(this.animationDuration);
   final Duration animationDuration;
   late final animationController =
-  AnimationController(vsync: this, duration: animationDuration);
+      AnimationController(vsync: this, duration: animationDuration);
 
   @override
   void dispose() {
